@@ -67,9 +67,9 @@ mean <- mean(totalStepsPerday, na.rm = TRUE)
 median <- median(totalStepsPerday, na.rm = TRUE)
 ```
 
-The **mean** of total number of steps taken per day = 1.0766 &times; 10<sup>4</sup>
+* The **mean** of total number of steps taken per day = 1.0766 &times; 10<sup>4</sup>
 
-The **median** of total number of steps taken per day = 10765
+* The **median** of total number of steps taken per day = 10765
 
 ### Step:3 What is the average daily activity pattern?
 * Calculate average of steps over all days by time interval, Make a Time series plot of the 5-minute interval and the average number of steps taken, averaged across all days
@@ -95,7 +95,7 @@ avgMaxStepsInterval
 ## [1] "835"
 ```
 
-The time interval 835 has the maximum number of steps on average across all the days (maximum average number of steps= 104)
+* The time interval 835 has the maximum number of steps on average across all the days (maximum average number of steps= 104)
 
 ### Step: 4 Imputing missing values
 * Calculate and report the total number of missing values in the data set
@@ -104,7 +104,7 @@ The time interval 835 has the maximum number of steps on average across all the 
 totalNA <- sum(is.na(activityData))
 ```
 
-The total number of rows with NAs = 2304
+* The total number of rows with NAs = 2304
 
 * Fill in missing values using the mean interval value across all days, Create 
 a new data set that is equal to the original data set but with the missing data filled in
@@ -123,7 +123,7 @@ sum(is.na(activityData))
 ## [1] 0
 ```
 
-The new data set "activityData" has no NAs
+* The new data set "activityData" has no NAs
 
 * Make a histogram of the total number of steps taken each day for the new data set "activityData" 
 
@@ -145,15 +145,14 @@ median1 <- median(totalStepsPerday)
 ```
 
 
-The **mean** of total number of steps taken per day after imputation = 1.0766 &times; 10<sup>4</sup>
+* The **mean** of total number of steps taken per day after imputation = 1.0766 &times; 10<sup>4</sup>
 
-The **median** of total number of steps taken per day after imputation = 1.0766 &times; 10<sup>4</sup>
+* The **median** of total number of steps taken per day after imputation = 1.0766 &times; 10<sup>4</sup>
 
-The mean before and after imputation is same and in case of median the difference 
-is negligible, so the impact of imputing missing data on the estimates of the total daily number of steps is **insignificant or negligible**
+* The mean before and after imputation is same and in case of median the difference is negligible, so the impact of imputing missing data on the estimates of the total daily number of steps is **insignificant or negligible**
 
 ### Step 5: Are there differences in activity patterns between weekdays and weekends?
-*Create a new factor variable in the data set with two levels -- "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
+* Create a new factor variable in the data set with two levels -- "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
 
 ```r
@@ -177,7 +176,7 @@ xyplot(steps ~ interval | dayType, avgSteps, type = "l", layout = c(1, 2), xlab 
 
 ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
 
-Additionally, Let's compute the summary statistics of avg steps across all intervals and days by Weekdays/Weekends
+* Additionally, Let's compute the summary statistics of avg steps across all intervals and days by Weekdays/Weekends
 
 ```r
 tapply(avgSteps$steps, avgSteps$dayType, summary)
@@ -193,4 +192,6 @@ tapply(avgSteps$steps, avgSteps$dayType, summary)
 ##    0.00    1.24   32.30   42.40   74.70  167.00
 ```
 
-From the plot and summary statistics it can be concluded that there is a clear difference in activity patterns between weekdays and weekends
+* From the plot and summary statistics it can be concluded that there is a clear difference in activity patterns between weekdays and weekends
+
+### End of the assignment
